@@ -1,0 +1,56 @@
+# =========================
+
+# ROOT
+
+# =========================
+
+node_modules/
+.env
+.env.*
+*.log
+.DS_Store
+
+# =========================
+
+# BACKEND
+
+# =========================
+
+backend/node_modules/
+backend/.env
+backend/.env.*
+backend/logs/
+backend/*.log
+
+# =========================
+
+# FRONTEND (Vite)
+
+# =========================
+
+frontend/node_modules/
+frontend/.env
+frontend/.env.*
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# =========================
+
+# EDITORS
+
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+
+# MISC
+
+# =========================
+
+coverage/
+*.tgz
