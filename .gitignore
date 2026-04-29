@@ -1,3 +1,62 @@
+<<<<<<< HEAD
 node_modules
 .env
 .DS_Store
+=======
+# =========================
+
+# ROOT
+
+# =========================
+
+node_modules/
+.env
+.env.*
+*.log
+.DS_Store
+
+# =========================
+
+# BACKEND
+
+# =========================
+
+backend/node_modules/
+backend/.env
+backend/.env.*
+backend/logs/
+backend/*.log
+
+# =========================
+
+# FRONTEND (Vite)
+
+# =========================
+
+frontend/node_modules/
+frontend/.env
+frontend/.env.*
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# =========================
+
+# EDITORS
+
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+
+# MISC
+
+# =========================
+
+coverage/
+*.tgz
+>>>>>>> 68d78554780ada11f242ff1a3db9bd3628e986ef
