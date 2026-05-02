@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+node_modules
+.env
+.DS_Store
+=======
 # =========================
 
 # ROOT
@@ -54,3 +59,4 @@ frontend/.vite/
 
 coverage/
 *.tgz
+>>>>>>> 68d78554780ada11f242ff1a3db9bd3628e986ef
