@@ -7,7 +7,7 @@ export const inngest=new Inngest({id:"interviewsphere"});
 const syncUser = inngest.createFunction(
   {
     id: "sync-user",
-    triggers: [{ event: "clerk/user.created" }], // ✅ FIXED
+    triggers: [{ event: "user.created" }], // ✅ FIXED
   },
   async ({ event }) => {
     const { id, email_addresses, first_name, last_name, image_url } = event.data;
