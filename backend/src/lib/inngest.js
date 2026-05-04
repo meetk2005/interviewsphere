@@ -7,7 +7,7 @@ export const inngest=new Inngest({id:"interviewsphere"});
 const syncUser = inngest.createFunction(
   {
     id: "sync-user",
-    triggers: [{ event: "user.created" }], // ✅ FIXED
+    triggers: [{ event: "clerk/user.created" }], // ✅ FIXED
   },
   async ({ event }) => {
     const { id, email_addresses, first_name, last_name, image_url } = event.data;
@@ -26,7 +26,7 @@ const syncUser = inngest.createFunction(
 const deleteUserFromDB = inngest.createFunction(
   {
     id: "delete-user-from-db",
-    triggers: [{ event: "user.deleted" }],
+    triggers: [{ event: "clerk/user.deleted" }],
   },
   async ({ event }) => {
     const { id } = event.data;
