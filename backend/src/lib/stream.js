@@ -14,14 +14,18 @@ export const chatClient=StreamChat.getInstance(apiKey,apiSecret)
 
 console.log("🔥 Stream client ready");
 
-export const upsertStreamUser=async(userData) =>{
-    try{
-        console.log("🔥 Calling Stream with:", userData);
-        await chatClient.upsertUser(userData)
-        console.log("Stream user upserted successfully",userData.id);
-    }catch (error){
-        console.error("Error upserting Stream User",error)
-    }
+export const upsertStreamUser = async (userData) => {
+  try {
+    console.log("🔥 Calling Stream with:", userData);
+
+    const res = await chatClient.upsertUser(userData);
+
+    console.log("✅ Stream response:", res);
+    console.log("✅ Stream user upserted successfully", userData.id);
+  } catch (error) {
+    console.error("❌ Error upserting Stream User:", error);
+    throw error;
+  }
 };
 
 
