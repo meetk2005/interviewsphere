@@ -8,6 +8,8 @@ if (!apiKey || !apiSecret) {
     console.error("STREAM_API_KEY & STREAM_API_SECRET is missing")
 }
 
+console.log("STREAM API KEY USED:", apiKey);
+
 export const chatClient=StreamChat.getInstance(apiKey,apiSecret)
 
 console.log("🔥 Stream client ready");
