@@ -1,10 +1,15 @@
+import { Navigate,Routes,Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ProblemsPage from "./pages/ProblemsPage"
+import { Toaster } from "react-hot-toast" 
+
 import "./App.css"
 import {
   useUser,
   SignInButton,
   SignOutButton,
   UserButton
-} from "@clerk/react";
+} from "@clerk/clerk-react";
 
 function App() {
   const { isLoaded, isSignedIn } = useUser();
@@ -14,22 +19,15 @@ function App() {
 
   return (
     <>
-      <h1>Welcome to App</h1>
+    <Routes>
 
-      {!isSignedIn ? (
-        <SignInButton mode="modal">
-          <button>Sign In</button>
-        </SignInButton>
-      ) : (
-        <>
-          <SignOutButton>
-            <button>Sign Out</button>
-          </SignOutButton>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/problems" element={isSignedIn ? <ProblemsPage/> : <Navigate to={"/"} />}/>
 
-          <UserButton />
-        </>
-      )}
-    </>
+    </Routes>
+
+    <Toaster position="" toastOptions={{duration:3000}}></Toaster>
+   </>
   );
 }
 
